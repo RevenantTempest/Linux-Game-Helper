@@ -136,18 +136,16 @@ A Linux distribution with:
    cd Linux-Game-Helper
    ```
 
-2. **Ensure dependencies are installed:**
+2. **Make sure dependencies are installed:**
 
    - `python3`
    - `protonhax`
    - `wxPython`
 
-3. **(Optional) Make the script executable:**
-
-   If your main script is named `trainer.py` (or similar):
+3. **Make the script executable:**
 
    ```bash
-   chmod +x trainer.py
+   chmod +x LinuxGH.py
    ```
 
 ---
@@ -200,7 +198,7 @@ trainer_config.ini
 
 ```ini
 [Game Trainer Locations]
-3489700 - = "/home/youruser/Applications/Games/Steam/common/StellarBlade/SBTrainer.exe"
+3489700 - = "/home/youruser/Applications/Trainers/trainer.exe"
 ```
 
 - The key is **`<GameID> -`**  
@@ -227,31 +225,3 @@ You generally don’t need to edit this file manually—the GUI will update it w
 
 ---
 
-## Roadmap / Ideas
-
-- Support for **multiple trainers per game**.
-- Optional **CLI flags** to bypass the GUI and run specific modes directly.
-- **Export/import** of trainer configurations between machines.
-
----
-
-## License
-
-Add your chosen license here (e.g., **MIT**, **GPL-3.0**, etc.):
-
-```text
-MIT License
-...
-```
-
----
-
-## Contributions
-
-**Pull requests** and **suggestions** are welcome. If you have ideas to:
-
-- Improve detection,
-- Add more integrations, or
-- Enhance the UI,
-
-feel free to open an **issue** or **pull request**.
