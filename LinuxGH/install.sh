@@ -9,7 +9,7 @@ echo "Linux Game Helper - Install Script"
 echo "==================================="
 echo ""
 
-# Check if NOT running as root
+
 if [ "$EUID" -ne 0 ]; then
     echo "This script needs sudo privileges to install to /usr/local/bin"
     echo "Restarting with sudo..."
@@ -26,7 +26,7 @@ INSTALL_DIR="/usr/local/bin"
 SCRIPT_NAME="linuxgh"
 SCRIPT_PATH="$INSTALL_DIR/$SCRIPT_NAME"
 
-# Check if linuxgh script exists in current directory
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [ ! -f "$SCRIPT_DIR/linuxgh" ]; then
     echo "ERROR: linuxgh script not found in $SCRIPT_DIR"
@@ -39,7 +39,7 @@ echo "Installing linuxgh to $SCRIPT_PATH"
 cp "$SCRIPT_DIR/linuxgh" "$SCRIPT_PATH"
 chmod 755 "$SCRIPT_PATH"
 
-# Create config directory for the actual user (not root)
+
 CONFIG_DIR="$ACTUAL_HOME/.config/linuxgh"
 if [ ! -d "$CONFIG_DIR" ]; then
     echo "Creating config directory: $CONFIG_DIR"
@@ -47,7 +47,7 @@ if [ ! -d "$CONFIG_DIR" ]; then
     chown "$ACTUAL_USER:$ACTUAL_USER" "$CONFIG_DIR"
 fi
 
-# Install icon if it exists
+
 ICON_INSTALLED=false
 if [ -f "$SCRIPT_DIR/linuxgh.png" ]; then
     echo "Installing icon to /usr/share/pixmaps/linuxgh.png"
