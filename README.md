@@ -72,8 +72,8 @@ All trainer paths are saved per-game in `~/.config/linuxgh/trainer_config.ini` f
 ### 1. Download or clone this repository
 
 ```bash
-git clone https://github.com/yourusername/linux-game-helper.git
-cd linux-game-helper
+git clone https://github.com/NDHamilton/linux-game-helper.git
+cd linux-game-helper/LinuxGH
 ```
 
 Your directory should contain:
